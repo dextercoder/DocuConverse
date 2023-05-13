@@ -60,7 +60,7 @@ text_splitter = CharacterTextSplitter(chunk_size=chunksize, chunk_overlap=10)
 # Intializing Cohere Embdedding
 # embeddings = CohereEmbeddings(model="large", cohere_api_key=st.secrets["cohere_apikey"])
 
-embeddings = OpenAIEmbeddings(model="large", open_api_key=st.secrets["open_apikey"])
+embeddings = OpenAIEmbeddings(openai_api_key=st.secrets["openai_apikey"])
 
 
 def PDF_loader(document):
@@ -97,7 +97,7 @@ def PDF_loader(document):
         llm=OpenAI(
             model="gpt-3.5-turbo",
             temperature=temp_r,
-            cohere_api_key=st.secrets["openai_apikey"],
+            openai_api_key=st.secrets["openai_apikey"],
         ),
         chain_type="stuff",
         retriever=retriever,
