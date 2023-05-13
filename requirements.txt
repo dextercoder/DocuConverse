@@ -6,3 +6,4 @@ streamlit
 streamlit-chat
 cohere
 openai
+tiktoken
