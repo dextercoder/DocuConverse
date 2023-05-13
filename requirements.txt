@@ -1,0 +1,8 @@
+chromadb
+langchain
+unstructured
+unstructured[local-inference]
+streamlit
+streamlit-chat
+cohere
+openai
