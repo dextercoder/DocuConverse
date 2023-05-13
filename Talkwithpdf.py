@@ -94,11 +94,12 @@ def PDF_loader(document):
     # )
 
     qa = RetrievalQA.from_chain_type(
-        llm=OpenAI(
-            model="gpt-3.5-turbo",
-            temperature=temp_r,
-            openai_api_key=st.secrets["openai_apikey"],
-        ),
+        llm = OpenAI(),
+        # llm=OpenAI(
+        #     model="gpt-3.5-turbo",
+        #     temperature=temp_r,
+        #     openai_api_key=st.secrets["openai_apikey"],
+        # ),
         chain_type="stuff",
         retriever=retriever,
         return_source_documents=True,
